@@ -2,12 +2,15 @@ body{
     padding: 12px 12px;
 }
 
+h2{
+    margin-top: 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 300px 300px;
     grid-gap: 12px;
-    container-type: inline-size;
 }
 
 .box{
@@ -23,7 +26,8 @@ body{
 }
 
 img{
-    height: 50%;
+    /* height: 50%; */
+    width: 50cqw;
     object-fit: contain;
     object-position: top;
 }
@@ -31,12 +35,13 @@ img{
 .c-paragraph{
     display: inline-block;
     padding: 12px;
+    max-width: 50cqw;
 }
 
 .container-1{
     grid-column: span 4;
     grid-row: span 2;
-    container-type: inline-size;
+    container-type: size;
     container-name: container-1;
 }
 
@@ -47,9 +52,16 @@ img{
     container-name: container-2;
 }
 
+
 @container container-1 (max-width: 500px){
     .box{
         flex-direction: column;
+    }
+    img{
+        width: 100%;
+    }
+    .c-paragraph{
+        max-width: 100cqw;
     }
 }
 
