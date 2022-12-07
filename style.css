@@ -42,18 +42,19 @@ img{
     grid-column: span 4;
     grid-row: span 2;
     container-type: size;
-    container-name: container-1;
+    container-name: container;
 }
 
 .container-2{
     grid-column: span 3;
     grid-row: span 2;
     container-type: inline-size;
-    container-name: container-2;
+    /* container-name: container-2; */
+    container-name: container;
 }
 
 
-@container container-1 (max-width: 500px){
+@container container (max-width: 500px){
     .box{
         flex-direction: column;
     }
@@ -65,8 +66,3 @@ img{
     }
 }
 
-@container container-2 (max-width: 500px){
-    .box{
-        flex-direction: column;
-    }
-}
